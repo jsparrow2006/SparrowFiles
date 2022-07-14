@@ -1,0 +1,17 @@
+.workAreaPanel {
+  display: flex;
+}
+
+.split {
+  position: fixed!important;
+}
+
+.Resizer.vertical {
+  width: 3px;
+  background-color: black;
+  cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+  background-color: red;
+}

@@ -1,0 +1,28 @@
+.fileList {
+  flex-direction: column;
+  height: 80%;
+  overflow-y: auto;
+}
+
+.file {
+  display: flex;
+  flex-direction: row;
+  height: 34px;
+  //height: 60px;
+  border-bottom: 1px solid grey;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  &:hover {
+    background-color: rgba(85, 138, 229, 0.53);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-size: contain;
+    background-position: center;
+  }
+}
