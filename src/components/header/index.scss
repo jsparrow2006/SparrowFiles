@@ -1,0 +1,13 @@
+.navPanel {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding-left: 5px;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+}

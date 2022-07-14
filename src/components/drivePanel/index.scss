@@ -1,0 +1,29 @@
+.drivePanel {
+  display: flex;
+  flex-direction: row;
+  min-height: 46px;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+
+  .buttonDrive {
+    margin-right: 5px;
+
+    &.activeDrive {
+      background-color: #045dbd;
+      color: white;
+    }
+  }
+
+  .rs-badge-content {
+    left: 12px;
+    top: 4px!important;
+    width: fit-content;
+    background-color: darkgrey;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+}
