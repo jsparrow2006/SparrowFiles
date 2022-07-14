@@ -83,7 +83,7 @@
     "@types/react-redux": "^7.1.18",
     "@types/react-router-dom": "^5.1.8",
     "concurrently": "^5.3.0",
-    "electron": "^10.1.1",
+    "electron": "^11.0.1",
     "electron-builder": "^22.8.0",
     "electron-devtools-installer": "^3.1.1",
     "prettier": "^2.1.1",
@@ -94,8 +94,12 @@
     "files": [
       "build/**/*",
       "node_modules/**/*",
-      "package.json"
+      "package.json",
+      "build/electron.js"
     ],
+    "extraMetadata": {
+      "main": "./build/electron.js"
+    },
     "directories": {
       "buildResources": "assets"
     },
@@ -104,7 +108,11 @@
     },
     "electronDownload": {
       "cache": "./cache"
-    }
+    },
+    "mac": {
+      "target": "zip"
+    },
+    "productName": "Sparrow Files Commander"
   },
   "main": "public/electron.js",
   "homepage": "./",
