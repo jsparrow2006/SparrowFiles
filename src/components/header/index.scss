@@ -11,3 +11,12 @@
     flex-direction: row;
   }
 }
+
+.settingsDialog {
+  height: 100vh!important;
+
+  .drawerBodyCustom {
+    margin: 0px!important;
+    height: 100%!important;
+  }
+}

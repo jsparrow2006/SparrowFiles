@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Icon, Nav, Navbar, Drawer, Button } from 'rsuite';
 
+import Settings from '@containers/settings'
+
 import IPropsWithChildren from '@commonTypes/IPropsWithChildren'
 
 import './index.scss'
@@ -11,7 +13,7 @@ interface IHeaderPropTypes extends IPropsWithChildren{
 
 const Header: React.FC<IHeaderPropTypes> = (props: IHeaderPropTypes) => {
     const { children } = props;
-    const [isOpenDrawer, setIsOpenDrawer] = useState<boolean>(false);
+    const [isOpenDrawer, setIsOpenDrawer] = useState<boolean>(true);
 
     const openDrawer = () => {
         setIsOpenDrawer(true);
@@ -40,17 +42,14 @@ const Header: React.FC<IHeaderPropTypes> = (props: IHeaderPropTypes) => {
                 placement='bottom'
                 show={isOpenDrawer}
                 onHide={closeDrawer}
+                className='settingsDialog'
             >
                 <Drawer.Header>
-                    <Drawer.Title>Drawer Title</Drawer.Title>
+                    <Drawer.Title>Settings</Drawer.Title>
                 </Drawer.Header>
-                <Drawer.Body>
-                    dfgdfgdfgg
+                <Drawer.Body className='drawerBodyCustom'>
+                    <Settings />
                 </Drawer.Body>
-                <Drawer.Footer>
-                    <Button onClick={closeDrawer} appearance="primary">Confirm</Button>
-                    <Button onClick={closeDrawer} appearance="subtle">Cancel</Button>
-                </Drawer.Footer>
             </Drawer>
         </>
     );

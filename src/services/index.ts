@@ -10,6 +10,8 @@ export const modalService = new ModalService();
 
 export const extensionService = new ExtentionService({modalService, currentOS, fileSystemService});
 
+console.log(extensionService)
+
 
 const MainService = () => {
 

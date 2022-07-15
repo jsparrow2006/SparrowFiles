@@ -1,4 +1,5 @@
 function main (context){
+    console.log(context)
     const { modalService, views } = context;
     const { testModalView } = views;
     let counter = 0;
